@@ -15,7 +15,7 @@ const useFetch = (endpoint) => {
         const res = await fetch(endpoint)
         if (!res.ok) throw Error(res.statusText)
         const result = await res.json()
-        setData(result.filter(r => r !== null))
+        setData(Array.isArray(result) ? result.filter(r => r !== null) : result)
 
       } catch (e) {
 

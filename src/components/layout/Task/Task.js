@@ -2,9 +2,10 @@
 
 import TaskModel from "models/Task";
 import PropTypes from "prop-types";
-import React, { } from "react";
+import React from "react";
 import { Badge, ListGroupItem, Button, Table } from "react-bootstrap";
 import Line from "components/shared/Line";
+import { Link } from "react-router-dom";
 
 const Task = ({ task, updateCompleted }) => {
 
@@ -29,6 +30,7 @@ const Task = ({ task, updateCompleted }) => {
       onClick={() => updateCompleted(!task.completed, task)}>
       {task.completed ? "Annuler" : "Terminer"}
     </Button>
+    <Link to={`/tasks/${task.id}`}>Afficher</Link>
   </ListGroupItem>;
 };
 
