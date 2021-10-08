@@ -1,5 +1,5 @@
 import { createContext, useState } from 'react';
-const defaultUser = { id: 1, firstName: 'David', lastName: "Legrand" }
+const defaultUser = { id: 1, isLogged: false, firstName: 'David', lastName: "Legrand" }
 const UserContext = createContext(defaultUser)
 
 const UserProvider = ({ children }) => {

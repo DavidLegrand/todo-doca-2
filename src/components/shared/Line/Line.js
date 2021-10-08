@@ -14,7 +14,8 @@ const Line = ({ data, label, datatype }) => {
   }
 
   return <>
-    {data && <tr><td>{label}</td><td>{dataDisplay}</td></tr>}
+    {data &&
+      <tr><td>{label}</td><td>{dataDisplay}</td></tr>}
   </>;
 };
 
