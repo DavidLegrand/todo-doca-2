@@ -1,4 +1,4 @@
-import ToDoList from 'components/ToDoList';
+import ToDoList from 'components/page/ToDoList';
 import { Col, Container, Row } from 'react-bootstrap';
 import './App.css';
 
@@ -7,7 +7,7 @@ function App() {
     <Container>
       <Row>
         <Col>
-          <h1 className="display-4 text-center">To Do List</h1>
+          
           <ToDoList />
         </Col>
       </Row>
