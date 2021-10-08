@@ -1,17 +1,21 @@
 import ToDoList from 'components/page/ToDoList';
+import Menu from 'components/shared/Menu';
 import { Col, Container, Row } from 'react-bootstrap';
+import Routes from 'routes';
 import './App.css';
 
 function App() {
   return (
-    <Container>
-      <Row>
-        <Col>
-          
-          <ToDoList />
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <Menu />
+      <Container>
+        <Row>
+          <Col>
+            <Routes />
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 

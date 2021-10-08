@@ -27,7 +27,6 @@ const ToDoListView = ({ list, error, loading, addTask, updateCompleted }) => {
         <Button variant="dark" onClick={() => updateCompleted(false)}>Annuler tout</Button>
       </ListGroupItem>
     </ListGroup>
-    <NewTaskForm addTask={addTask} />
   </>;
 };
 
