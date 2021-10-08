@@ -1,8 +1,10 @@
+import { UserContext } from "contexts/User";
 import TaskModel from "models/Task";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Form, FormGroup, FormLabel, FormControl, FormCheck, Button } from 'react-bootstrap'
 
 const NewTaskForm = ({ addTask }) => {
+  const [user] = useContext(UserContext)
   const init = new TaskModel()
   const [newTask, setNewTask] = useState(init)
 
@@ -14,7 +16,7 @@ const NewTaskForm = ({ addTask }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    addTask(newTask)
+    addTask({ ...newTask, createdBy: user.id, assignedTo: user.id })
     setNewTask(init)
   }
 
